@@ -28,6 +28,15 @@
 		"8000": {
 			"label": "vscode"
 		}
+	},
+	"containerEnv": {
+		"CHOKIDAR_USEPOLLING":"true",
+		"WATCHPACK_POLLING":"true", 
+	},
+	"remoteEnv": {
+		"CHOKIDAR_USEPOLLING":"true" ,	
+		"WATCHPACK_POLLING":"true", 
+	},
 	}
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
