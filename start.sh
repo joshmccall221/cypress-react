@@ -1,15 +1,15 @@
 # https://vitejs.dev/guide/
 
-yarn create vite my-vue-app --template react-ts
+yarn create vite my-app --template react-ts
 
 # https://docs.cypress.io/guides/getting-started/installing-cypress
 # https://docs.cypress.io/guides/tooling/typescript-support
-cd my-vue-app
+cd my-app
 yarn install
 yarn add -D cypress typescript  
-mkdir cypress/
+mkdir -p cypress/e2e
 cp ../tsconfig.json ./cypress/tsconfig.json
-cp ../vite.spec.ts ./cypress/vite.spec.ts
+cp ../vite.cy.ts ./cypress/e2e/vite.cy.ts
 yarn run dev & 
 yarn run cypress open
 yarn run cypress open
