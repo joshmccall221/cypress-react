@@ -7,7 +7,7 @@ yarn create vite my-app --template react-ts
 
 cd ./my-app/
 yarn install
-yarn add -D cypress typescript webpack 
+yarn add -D cypress typescript 
 mkdir -p ./cypress/e2e
 pwd
 cp ../tsconfig.json ./cypress/tsconfig.json
