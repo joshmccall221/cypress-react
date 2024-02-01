@@ -7,12 +7,12 @@ describe('template spec', () => {
 
   it('init', () => { })
 
-  it('vite', () => {
+  it('vite appears on the page', () => {
     cy.get('h1').contains('Vite')
     cy.contains('Vite')
   })
 
-  it('button', () => {
+  it('counter button is clickable', () => {
     cy.contains('count is 0')
     cy.get('button').click()
     cy.contains('count is 1')
@@ -30,14 +30,14 @@ describe('template spec', () => {
 
 // <button onClick={() => setCount((count) => count + increment)}>
 
-describe.only('network', () => {
+describe('network', () => {
   beforeEach(() => {
     cy.intercept('GET', '/getCountInterval.json', { body: Math.floor(Math.random() * 10) }).as('getCountInterval')
     cy.visit('http://127.0.0.1:5173/')
   })
 
 
-  it('button', () => {
+  it('button incements counter based on api call', () => {
     cy.wait('@getCountInterval').then((interception) => {
       const increment = interception.response.body
 
