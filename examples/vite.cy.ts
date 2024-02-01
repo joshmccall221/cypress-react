@@ -49,3 +49,29 @@ describe.only('network', () => {
     })
   })
 })
+
+// https://docs.cypress.io/guides/component-testing/react/overview#React-with-Vite
+// cypress.config.ts
+// component: {
+//   devServer: {
+//     framework: 'react',
+//     bundler: 'vite'
+//   }
+// }
+
+// beforeEach(() => {
+//       cy.intercept('GET', '/getCountInterval.json', { body: Math.floor(Math.random() * 10) }).as('getCountInterval')
+// })
+// it('renders', () => {
+//   // see: https://on.cypress.io/mounting-react
+//   cy.mount(<App />)
+//   cy.wait('@getCountInterval').then((interception) => {
+//     const increment = interception.response.body
+
+//     cy.contains('count is 0')
+//     cy.get('button').click()
+//     cy.contains(`count is ${increment}`)
+//     cy.get('button').click()
+//     cy.contains(`count is ${2 * increment}`)
+//   })
+// })
