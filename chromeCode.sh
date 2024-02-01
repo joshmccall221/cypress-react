@@ -3,4 +3,3 @@ sudo apt-get update && export DEBIAN_FRONTEND=noninteractive \
 && sudo apt-get -y install /tmp/chrome.deb
 
 google-chrome &
-code-server
